@@ -17,9 +17,7 @@ public class PointsCover {
         segments.sort(Comparator.comparingInt(Pair::getValue));
         List<Integer> points = new ArrayList<>();
         int min = segments.get(0).getKey() - 1;
-        int size = segments.size();
-        for (int i = 0; i < size; i++) {
-            Pair<Integer, Integer> segment = segments.get(i);
+        for (Pair<Integer, Integer> segment : segments) {
             if (segment.getKey() > min) {
                 points.add(segment.getValue());
                 min = segment.getValue();
