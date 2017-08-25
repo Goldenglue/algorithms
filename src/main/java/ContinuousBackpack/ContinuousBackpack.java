@@ -1,8 +1,8 @@
+package ContinuousBackpack;
+
 import javafx.util.Pair;
 
 import java.util.*;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class ContinuousBackpack {
 
@@ -20,7 +20,7 @@ public class ContinuousBackpack {
     }
 
     private static void calculateMaxValue(List<Pair<Integer, Integer>> items, int capacity) {
-        Comparator<Pair<Integer, Integer>> compare = (o1,o2) -> {
+        Comparator<Pair<Integer, Integer>> compare = (o1, o2) -> {
             double key1 = o1.getKey();
             double key2 = o2.getKey();
             double value1 = o1.getValue();

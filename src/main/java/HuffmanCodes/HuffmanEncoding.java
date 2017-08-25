@@ -1,12 +1,13 @@
+package HuffmanCodes;
+
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class HuffmanCodes {
+public class HuffmanEncoding {
     public static void main(String[] args) {
-        /*Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         String input = scanner.nextLine();
-        huffmanEncode(input);*/
-        huffmanEncode("aaaaaaa");
+        huffmanEncode(input);
     }
 
     private static void huffmanEncode(String input) {
@@ -88,7 +89,6 @@ public class HuffmanCodes {
         }
         return builder.toString();
     }
-
 
     private static class Node {
         private final char aChar;

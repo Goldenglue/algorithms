@@ -1,8 +1,13 @@
+package PointsProblems;
+
 import javafx.util.Pair;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
+import java.util.Scanner;
 
-public class PointsCover {
+public class PointsDecover {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
@@ -25,26 +30,5 @@ public class PointsCover {
         }
         System.out.println(points.size());
         points.forEach(System.out::println);
-    }
-
-
-
-    private static List<Pair<Double, Double>> pointsCover(List<Double> points) {
-        points.sort(Comparator.comparingDouble(o -> o));
-        List<Pair<Double, Double>> result = new ArrayList<>();
-        System.out.println(points);
-        int size = points.size();
-        for (int i = 0; i < size - 1; ) {
-            Double left = points.get(i);
-            Double right = left + 1.0;
-            Pair<Double, Double> segment = new Pair<>(left, right);
-            System.out.println(segment);
-            result.add(segment);
-            i++;
-            while (i < size - 1 && points.get(i) <= right) {
-                i++;
-            }
-        }
-        return result;
     }
 }
