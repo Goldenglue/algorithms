@@ -27,14 +27,10 @@ public class QuickSort {
         for (int j = low + 1; j <= high; j++) {
             if (arr[j] <= x) {
                 i++;
-                int temp = arr[i];
-                arr[i] = arr[j];
-                arr[j] = temp;
+                swap(arr,i,j);
             }
         }
-        int temp = arr[i];
-        arr[i] = arr[low];
-        arr[low] = temp;
+        swap(arr,i,low);
         return i;
     }
 
