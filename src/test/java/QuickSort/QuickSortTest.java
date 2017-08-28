@@ -14,6 +14,7 @@ public class QuickSortTest {
     private final static int MAX = 10000;
     private final static int TESTS = 100;
 
+
     @Before
     public void setUp() {
         numbers = new int[SIZE];

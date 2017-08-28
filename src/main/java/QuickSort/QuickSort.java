@@ -21,23 +21,6 @@ public class QuickSort {
         }
     }
 
-    //    private int partition(int[] arr, int low, int high) {
-//        int x = arr[low];
-//        int i = low - 1;
-//        for (int j = low; j < high; j++) {
-//            if (arr[j] <= x) {
-//                i++;
-//                int temp = arr[i];
-//                arr[i] = arr[j];
-//                arr[j] = temp;
-//            }
-//        }
-//        i++;
-//        int temp = arr[i];
-//        arr[i] = arr[low];
-//        arr[low] = temp;
-//        return i;
-//    }
     private int partition(int[] arr, int low, int high) {
         int x = arr[low];
         int i = low;
@@ -60,14 +43,5 @@ public class QuickSort {
         int temp = array[l];
         array[l] = array[r];
         array[r] = temp;
-    }
-
-    public static void main(String[] args) {
-        int[] arr = {8, 2, 4, 9, 7, 9};
-        QuickSort sort = new QuickSort();
-        sort.quickSort(arr, 0, arr.length - 1);
-        for (int i : arr) {
-            System.out.println(i);
-        }
     }
 }
